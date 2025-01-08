@@ -1,0 +1,233 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Print
+{
+    height: 40px;
+    width: 80px;
+    margin: 10px;
+    margin-left: 45%;
+    background-color: orange;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.Print:hover
+{
+    scale: 1.22;
+}
+main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    /* background-color: rgb(247, 180, 56); */
+    border: 1px solid black;
+    margin: 40PX;
+}
+.logo
+{
+    width: 100%;
+    height: 150px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.logo h2
+{
+    font-size: 35px;
+    font-weight: 900;
+    color: rgb(252, 10, 10);
+}
+.HotelLogo
+{
+    height: 100%;
+    margin-left: 40px;
+    padding: 5px;
+}
+.hotelIcon
+{
+    height: 80%;
+}
+.timing
+{
+    display: flex;
+    justify-content:space-evenly;
+    height: 40px;
+    background-color: rgba(255, 231, 47, 0.392);
+    margin: 5px;
+    flex-wrap: wrap;
+}
+    .timing h2{
+        font-size: 35px;
+    }
+    .date
+    {
+        border: none;
+        font-size: 19px;
+        /* background-color: rgba(248, 230, 94, 0.922); */
+        padding: 5px;
+        font-weight: 700;
+    }
+.customerDetail
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+    .customerDetail div
+    {
+        margin-left: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+    }
+    .customerDetail h4
+    {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .customerDetail input
+    {
+        width: 70%;
+        border: none;
+        margin: 5px;
+        height: 30px;
+        font-size: large;
+    }
+    .customerDetail textarea
+    {
+        border: none;
+        height: 30px;
+        width: 80%;
+        font-size: large;
+        margin-left: 10px;
+    }
+.room
+{
+    display: flex;
+    flex-direction: column;
+}
+.room input
+{
+    width: 30%;
+}
+.Guests h5
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+    .Guests input
+    {
+        font-size: 17px;
+        text-align: center;
+    }
+    #Total_Guest
+    {
+        font-size: 20px;
+        color: black;
+        width: 100px;
+        /* background-color: blueviolet; */
+    }
+table
+{
+    width: 100%;
+    height: 250px;
+}
+    .parameters
+    {
+        align-items: center;
+        text-align: center;
+    }
+    .parameters input
+    {
+        height: 90%;
+        width: 90%;
+        text-align: center;
+        font-size: 16px;
+        border: none;
+    }
+    table th
+    {
+        background-color: rgba(130, 126, 120, 0.238);
+    }
+    .result
+    {
+        font-size: 20px;
+        width: 20%;
+    }
+    .parameter
+    {
+        font-weight: 700;
+        background-color: rgba(171, 169, 166, 0.238);
+    }
+    #Rooms
+    {
+        height: 90%;
+        border: none;
+        font-size: 16px;
+    }
+.totalCost
+{
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    margin-left: 75%;
+    width: 150px;
+}
+.totalCost input
+{
+    border: none;
+    font-size: 20px;
+    width: 100%;
+    /* background-color: brown; */
+}
+.Subtotal
+{
+    display: flex;
+    flex-direction: row;
+    background-color:brown;
+}
+    .tax
+    {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .total
+    {
+        font-size: 20px;
+        border-bottom: 2px solid black;
+        display: flex;
+        gap: 10px;
+    }   
+footer
+{
+    border-top: 1px solid black;
+    margin-bottom: 10px;
+}
+footer h4
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+footer img
+{
+    height: 15px;
+    margin: 5px;
+}
+footer p 
+{
+    margin-left:25% ;
+    text-decoration: underline;
+}

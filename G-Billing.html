@@ -1,0 +1,139 @@
+
+<!--    ⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠
+🚫🚫🚫PLEASE DON'T DO ANY CHANGES AT ALL BEFORE HAVING REQUIRED KNOWLEDGE 🚫🚫🚫
+VEDANT SASE (DEVELOPER) HAD LOSTED HIS SLEEPS FOR THIS PROJECT DEVELOPMENT !!! 
+                🙏  SO PLEASE DON'T TOUCH THE CODE 🙏
+            😊THANKS ROHUL FOR GIVING ME THIS PROJECT😊
+❗❗❗⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠❗❗❗ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganpati Lodging</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="createPDF.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <main id="invoice">
+        <form method="post" action="https://script.google.com/macros/s/AKfycbwJM3mPvm6AszxlyK_iMq2KfBlcMfdCd11AsBu_TtqXFkDjlucBkT-Dol6zbJJGrw6flA/exec" name="contact-form">
+
+<!-- LOGO AND NAME             -->
+
+
+        <div class="logo">
+            <img class="HotelLogo" src="Images/OIP.png" alt="HotelLogo">
+            <h2>Hotel Ganpati & Lodging</h2>
+            <img class="hotelIcon" src="Images/hotel.png" alt="hotelIcon">
+        </div>
+
+<!-- INVOICE DATE & TIME  -->
+
+        <div class="timing">
+            <h2>Inovice</h2>
+            <input type="datetime-local" formtarget="dd-mm-yyyy" name="D-T" id="date" class="date" required >
+        </div>
+
+
+<!-- CUSTOMER DETAILS -->
+
+        <div class="customerDetail">
+            <div><h4>Customer Name : <input id="Name" type="text" name="Customer-Name" required>
+            </h4></div>
+            <div>
+                <h4>Address : <input name="address" id="address" name="Address" cols="30" rows="10"></input>
+                </h4>
+            </div>
+            <div class="room">
+                <h4>Room No : <input type="number" name="Room-No">
+                </h4>
+                <h4 class="Moobile">Mobile No : <input type="number" name="Mobile-No" required maxlength="10" ></h4>
+            </div>
+            <div class="Guests"><h4>Number Of Guests :</h4>
+                <h5>Male:<input type="number" name="Male" id="Male" required onchange="add()"></h5>
+                <h5>Female:<input type="number" name="Female" id="Female" required onchange="add()"></h5>
+                <h5>Childern:<input type="number" name="Childern" id="Childern" required onchange="add()"></h5> 
+                <h5>Total :<input type="number" name="Total" id="Total_Guest" readonly></h5>
+            </div>
+        </div>
+
+
+<!-- TABLE   -->
+
+
+        <table>
+            <tr>
+              <th>Parameter</th>
+              <th>Room Type</th>
+              <th>Unit Price</th>
+              <th>Total</th>
+            </tr>
+            <tr class="parameters">
+                <td class="parameter">Room Rent</td>
+                <td><select name="Room Type" id="Rooms" required>
+                    <option value="Non-AC" selected>Non-AC</option>
+                    <option value="AC" >AC</option>
+                    </select>
+                </td>
+                <td><input type="number" name="Rate" required id="Rate" onchange="Bill()"></td>
+                <td class="result" id="rateResult">00</td>
+            </tr>
+            <tr class="parameters">
+                <td class="parameter">Quantity</td>
+                <td><input type="number" name="Days" id="Days" required onchange="Bill()"></td>
+                <td>-</td>
+                <!-- push it in above tag -->
+                <!-- <input type="number" readonly id="dayRate"> -->
+                <td class="result" id="resultDay">00</td>
+            </tr class="parameters">
+            <tr class="parameters">
+                <td class="parameter">Extra Charges</td>
+                <td><input type="text" name="E-Charge-Reason"></td>
+                <td><input type="number" name="Extra-Charges" id="Extra-Charges" onchange="Bill()"></td>
+                <td class="result" id="eCharges">00</td>
+            </tr>
+          </table>
+
+<!-- TOTAL BILL -->
+
+          <div class="totalCost">
+            <div class="tax">Subtotal :<h5 id="bill">00.00</h5>
+            Tax (0%) : 0.0</div>
+            <h4>Total :<input class="total" name="Total_Bill" id="Totalbill" readonly></h4>
+          </div>
+    
+
+<!-- FOOTER DETAILS -->
+
+          <footer>
+            <pre>
+                <h3><img src="Images/map.png" alt="Location"> HOTEL GANPATI AND LODGING</h3>Shanishingnapur, Tel Nevasa, Dist - Ahmednagar, <br>Maharashtra, India. 414105<br><h4><img src="Images/phone-call.png" alt="">9822936765, 9860184583, 9075535913</h4>www.hotelganpatiandlodging.com
+                </pre>
+                <p>(Please take care of your valuables yourself, later complaint will not work)</p>
+          </footer>
+            </main>
+        </body>
+        
+<!-- PRINT BUTTON -->
+        <button class="Print" type="submit" value="Submit" id="submit">Print</button></form>
+
+<!-- SCRIPT FOR CALCULATIONS -->
+
+        <script src="Algo.js" ></script>
+</html>
+
+
+
+
+<!-- HOTEL GANPATI AND LODGING
+Shanishingnapur, Tel Nevasa, Dist - Ahmednagar. 414105 9822936765, 9860184583, 9075535913
+www.hotelganpatiandlodging.com
+(Please take care of your valuables yourself, later complaint will not work)
+
+ -->
+
+<!-- ₹ -->
